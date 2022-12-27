@@ -1,4 +1,6 @@
 package med.vol.api.medico;
 
-public record DadosCadastroMedico(String nome, String email, String crm, Especialidade especialidade) {
+import med.vol.api.endereco.DadosEndereco;
+
+public record DadosCadastroMedico(String nome, String email, String crm, Especialidade especialidade, DadosEndereco endereco) {
 }
