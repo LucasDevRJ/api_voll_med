@@ -26,6 +26,6 @@ public class PacienteController {
     }
 
     public List<DadosListagemPaciente> listar() {
-        return repository.findAll();
+        return repository.findAll().stream().map(DadosListagemPaciente::new);
     }
 }
