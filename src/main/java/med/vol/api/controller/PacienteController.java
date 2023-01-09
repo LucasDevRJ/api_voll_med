@@ -1,10 +1,7 @@
 package med.vol.api.controller;
 
 import jakarta.validation.Valid;
-import med.vol.api.paciente.DadosCadastroPaciente;
-import med.vol.api.paciente.DadosListagemPaciente;
-import med.vol.api.paciente.Paciente;
-import med.vol.api.paciente.PacienteRepository;
+import med.vol.api.paciente.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -34,7 +31,7 @@ public class PacienteController {
 
     @PutMapping
     @Transactional
-    public void atualizar(@RequestBody @Valid DadosCadastroPaciente dados) {
+    public void atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados) {
 
     }
 }
