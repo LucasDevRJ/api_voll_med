@@ -16,6 +16,7 @@ public record DadosCadastroMedico(
         String email,
 
         @NotBlank(message = "{telefone.obrigatorio}")
+        @Pattern(regexp = "\\d{9}", message = "{telefone.invalido}")
         String telefone,
 
         @NotBlank(message = "{crm.obrigatorio}")
