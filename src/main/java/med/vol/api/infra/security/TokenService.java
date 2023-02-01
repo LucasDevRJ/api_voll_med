@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.Date;
 
 @Service
 public class TokenService {
@@ -17,7 +16,7 @@ public class TokenService {
     public String gerarToken(Usuario usuario) {
         try {
             var algoritmo = Algorithm.HMAC256("12345678");
-            String token = JWT.create()
+            return JWT.create()
                     .withIssuer("API Voll.med")
                     .withSubject(usuario.getLogin())
                     .withExpiresAt(dataExpiracao())
