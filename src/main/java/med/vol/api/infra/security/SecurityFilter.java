@@ -18,8 +18,6 @@ public class SecurityFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         var tokenJWT = recuperarToken(request);
 
-        System.out.println(tokenJWT);
-
         filterChain.doFilter(request, response);
     }
 
