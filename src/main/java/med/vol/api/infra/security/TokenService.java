@@ -21,7 +21,7 @@ public class TokenService {
     public String gerarToken(Usuario usuario) {
 
         try {
-            var algoritmo = Algorithm.HMAC256(secret);
+            var algoritmo = Algorithm.HMAC256("12345678");
             return JWT.create()
                     .withIssuer("API Voll.med")
                     .withSubject(usuario.getLogin())
@@ -46,6 +46,6 @@ public class TokenService {
     }
 
     private Instant dataExpiracao() {
-        return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
+        return LocalDateTime.now().plusHours(1000).toInstant(ZoneOffset.of("-03:00"));
     }
 }
