@@ -3,6 +3,7 @@ package med.vol.api.controller;
 import jakarta.validation.Valid;
 import med.vol.api.domain.consulta.AgendaDeConsultas;
 import med.vol.api.domain.consulta.DadosAgendamentoConsulta;
+import med.vol.api.domain.consulta.DadosCancelamentoConsulta;
 import med.vol.api.domain.consulta.DadosDetalhamentoConsulta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
