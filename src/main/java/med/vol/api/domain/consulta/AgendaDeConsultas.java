@@ -1,6 +1,7 @@
 package med.vol.api.domain.consulta;
 
 import med.vol.api.domain.ValidacaoException;
+import med.vol.api.domain.medico.Medico;
 import med.vol.api.domain.medico.MedicoRepository;
 import med.vol.api.domain.paciente.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +30,12 @@ public class AgendaDeConsultas {
         }
 
         var paciente = pacienteRepository.findById(dados.idPaciente()).get();
-        var medico = medicoRepository.findById(dados.idMedico()).get();
+        var medico = escolherMedico(dados);
         var consulta = new Consulta(null, medico, paciente, dados.data());
         consultaRepository.save(consulta);
+    }
+
+    private Medico escolherMedico(DadosAgendamentoConsulta dados) {
+
     }
 }
