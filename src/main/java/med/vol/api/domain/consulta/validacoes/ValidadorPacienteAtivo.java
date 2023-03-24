@@ -4,7 +4,7 @@ import med.vol.api.domain.ValidacaoException;
 import med.vol.api.domain.consulta.DadosAgendamentoConsulta;
 import med.vol.api.domain.paciente.PacienteRepository;
 
-public class ValidadorPacienteAtivo {
+public class ValidadorPacienteAtivo implements ValidadorAgendamentoDeConsulta  {
 
     private PacienteRepository pacienteRepository;
 
