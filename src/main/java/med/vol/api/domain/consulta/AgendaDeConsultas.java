@@ -1,7 +1,7 @@
 package med.vol.api.domain.consulta;
 
 import med.vol.api.domain.ValidacaoException;
-import med.vol.api.domain.consulta.validacoes.ValidadorAgendamentoDeConsulta;
+import med.vol.api.domain.consulta.validacoes.agendamento.ValidadorAgendamentoDeConsulta;
 import med.vol.api.domain.medico.Medico;
 import med.vol.api.domain.medico.MedicoRepository;
 import med.vol.api.domain.paciente.PacienteRepository;
